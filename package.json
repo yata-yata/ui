@@ -6,7 +6,8 @@
     "test": "node ./node_modules/lab/bin/lab -v -c -p"
   },
   "dependencies": {
-    "nipple": "^2.5.1"
+    "nipple": "^2.5.1",
+    "hawk": "^2.2.0"
   },
   "devDependencies": {
     "lab": "^3.1.1",
