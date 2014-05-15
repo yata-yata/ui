@@ -11,7 +11,10 @@
   },
   "devDependencies": {
     "lab": "^3.1.1",
-    "hapi": "^4.1.0"
+    "hapi": "^4.1.0",
+    "gulp": "^3.6.2",
+    "browserify": "^4.1.2",
+    "vinyl-source-stream": "^0.1.1"
   },
   "peerDependencies": {
     "hapi": "4.x"
