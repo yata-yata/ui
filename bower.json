@@ -1,0 +1,21 @@
+{
+  "name": "ui",
+  "main": "index",
+  "version": "0.0.0",
+  "homepage": "https://github.com/yata-yata/ui",
+  "authors": [
+    "Mike Davis <mike@michaeljacobdavis.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "todomvc-common": "~0.1.9",
+    "bootstrap": "~3.1.1"
+  }
+}

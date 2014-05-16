@@ -1,0 +1,15 @@
+.signin-button {
+  width: 246px;
+  height: 54px;
+  background: url('images/White-signin-Long-base-44dp.png');
+  display: block;
+}
+
+.signin-button:hover {
+  background: url('images/White-signin-Long-hover-44dp.png');
+}
+
+.signin-button:active,
+.signin-button:focus {
+  background: url('images/White-signin-Long-press-44dp.png');
+}
