@@ -23,7 +23,7 @@ gulp.task('scripts', function(){
 gulp.task('styles', function () {
     gulp.src('./lib/src/sass/main.scss')
     .pipe(sass({
-        includePaths: require('node-neat').includePaths
+        includePaths: ['./lib/src/sass/'].concat(require('node-neat').includePaths)
     }))
     .pipe(gulp.dest('./lib/public/styles/'));
 });
@@ -53,12 +53,12 @@ gulp.task('default', ['clean'], function() {
 gulp.task('watch', function() {
 
     // Watch .scss files
-    gulp.watch('./lib/sass/**/*.scss', ['styles']);
+    gulp.watch('./lib/src/sass/**/*.scss', ['styles']);
 
     // Watch .js files
-    gulp.watch('./lib/scripts/**/*.js', ['scripts']);
+    gulp.watch('./lib/src/scripts/**/*.js', ['scripts']);
 
     // Watch image files
-    gulp.watch('./lib/sass/images/**/*', ['images']);
+    gulp.watch('./lib/src/sass/images/**/*', ['images']);
 
 });
