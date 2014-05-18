@@ -22,6 +22,7 @@
 }
 
 .signin-account-wall {
+  margin-top: 50px;
   vertical-align:middle;
   background-color:#f7f7f7;
   -moz-box-shadow:0 2px 2px rgba(0,0,0,0.3);
