@@ -33,9 +33,9 @@ gulp.task('styles', function () {
 // ======
 
 gulp.task('images', function () {
-    gulp.src('./lib/src/sass/images/**/*')
+    gulp.src('./lib/src/images/**/*')
     .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
-    .pipe(gulp.dest('./lib/public/styles/images'));
+    .pipe(gulp.dest('./lib/public/images'));
 });
 
 

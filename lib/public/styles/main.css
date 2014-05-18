@@ -232,7 +232,7 @@ dl {
 .signin-button {
   width: 246px;
   height: 54px;
-  background: url('images/google-sign-in.png');
+  background: url('/static/images/google-sign-in.png');
   background-position: -5px -5px;
   display: block; }
 
