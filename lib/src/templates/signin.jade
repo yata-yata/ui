@@ -1,0 +1,14 @@
+extends layout
+
+block head
+  link(rel='stylesheet', href='/static/styles/signin.css')
+
+block content
+  div.signin-container
+    h1.signin-title Yata-Yata
+    hr
+    a.signin-button(href='/auth/google')
+
+block foot
+  script(type='text/javascript', src='/static/scripts/bundle.js')
+
