@@ -21,7 +21,7 @@ gulp.task('scripts', function(){
 // ======
 
 gulp.task('styles', function () {
-    gulp.src('./lib/src/sass/main.scss')
+    gulp.src('./lib/src/sass/**/*.scss')
     .pipe(sass({
         includePaths: ['./lib/src/sass/'].concat(require('node-neat').includePaths)
     }))
