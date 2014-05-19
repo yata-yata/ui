@@ -7,10 +7,13 @@
     "postinstall": "./node_modules/bower/bin/bower install"
   },
   "dependencies": {
+    "bower": "^1.3.3",
+    "envify": "^1.2.1",
     "hawk": "^2.2.0",
     "jade": "^1.3.1",
     "nipple": "^2.5.1",
-    "bower": "^1.3.3"
+    "node-jsx": "^0.10.0",
+    "react": "^0.10.0"
   },
   "devDependencies": {
     "browserify": "^4.1.2",
@@ -20,6 +23,7 @@
     "hapi": "^4.1.0",
     "lab": "^3.1.1",
     "node-neat": "^1.3.0",
+    "reactify": "^0.13.1",
     "vinyl-source-stream": "^0.1.1"
   },
   "peerDependencies": {
