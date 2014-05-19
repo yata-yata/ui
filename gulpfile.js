@@ -42,7 +42,7 @@ gulp.task('images', function () {
 // Helpers
 // =======
 gulp.task('clean', function() {
-    return gulp.src(['./lib/public'], {read: false})
+    return gulp.src(['./lib/public/images', './lib/public/styles', './lib/public/scripts'], {read: false})
     .pipe(clean());
 });
 

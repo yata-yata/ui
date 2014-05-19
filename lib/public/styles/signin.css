@@ -229,6 +229,9 @@ dl {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+body {
+  background: #F0F0F0; }
+
 .signin-button {
   margin: 0 auto;
   width: 246px;
@@ -242,18 +245,19 @@ dl {
     background-position: -5px -133px; }
 
 .signin-container {
+  background: #FAFAFA;
+  border-top: 3px solid #497f99;
   width: 100%;
-  background-color: #f7f7f7;
-  -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
-  padding: 10px 0 40px; }
+  box-shadow: 1px 1px 2px #dcdcdc;
+  padding: 20px 0 40px; }
   @media screen and (min-width: 53.75em) {
     .signin-container {
       width: 450px;
-      margin: 0 auto; } }
+      margin-top: 100px;
+      margin-left: auto;
+      margin-right: auto; } }
   .signin-container h1.signin-title {
-    font-family: 'Sanchez', serif;
+    font-family: 'Nunito', sans-serif;
     text-align: center;
-    color: #dedede;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4); }
+    color: #dadada;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.2), 1px 1px 0 rgba(255, 255, 255, 0.1); }
