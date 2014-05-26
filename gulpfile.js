@@ -15,7 +15,7 @@ gulp.task('scripts', function(){
     .transform(reactify)
     .bundle({debug: true})
     .pipe(source('bundle.js'))
-    .pipe(gulp.dest('./lib/public/scripts/'));
+    .pipe(gulp.dest('./lib/generated/scripts/'));
 });
 
 
@@ -27,7 +27,7 @@ gulp.task('styles', function () {
     .pipe(sass({
         includePaths: ['./lib/src/sass/'].concat(require('node-neat').includePaths)
     }))
-    .pipe(gulp.dest('./lib/public/styles/'));
+    .pipe(gulp.dest('./lib/generated/styles/'));
 });
 
 
@@ -37,20 +37,34 @@ gulp.task('styles', function () {
 gulp.task('images', function () {
     gulp.src('./lib/src/images/**/*')
     .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
-    .pipe(gulp.dest('./lib/public/images'));
+    .pipe(gulp.dest('./lib/generated/images'));
+});
+
+
+// Components
+// ==========
+gulp.task('components', function(){
+    gulp.src('./lib/src/components/**/*')
+    .pipe(gulp.dest('./lib/generated/components'));
 });
 
 
 // Helpers
 // =======
 gulp.task('clean', function() {
-    return gulp.src(['./lib/public/images', './lib/public/styles', './lib/public/scripts'], {read: false})
+    return gulp.src(['./lib/generated'], {read: false})
     .pipe(clean());
 });
 
 gulp.task('default', ['clean'], function() {
-    gulp.start('styles', 'scripts', 'images', 'watch');
+    gulp.start('styles', 'scripts', 'images', 'components', 'watch');
 });
+
+gulp.task('build', ['clean'], function() {
+    gulp.start('styles', 'scripts', 'images', 'components');
+});
+
+
 
 gulp.task('watch', function() {
 

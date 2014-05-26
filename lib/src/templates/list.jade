@@ -5,7 +5,8 @@ block head
   link(rel='stylesheet', href='/static/styles/site.css')
 
 block content
-  div#todoapp!= reactOutput
+  div(ng-app='todo')
+    ng-view
 
 
 block foot
