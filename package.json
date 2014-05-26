@@ -4,7 +4,7 @@
   "main": "index",
   "scripts": {
     "test": "node ./node_modules/lab/bin/lab -v -c -p",
-    "postinstall": "./node_modules/bower/bin/bower install",
+    "postinstall": "./node_modules/bower/bin/bower install && ./node_modules/gulp/bin/gulp.js build",
     "start": "gulp"
   },
   "dependencies": {
