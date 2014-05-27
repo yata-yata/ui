@@ -16,7 +16,6 @@
   ],
   "appPath": "./lib/src",
   "dependencies": {
-    "font-awesome": "~4.1.0",
-    "todomvc-common": "~0.1.9"
+    "font-awesome": "~4.1.0"
   }
 }

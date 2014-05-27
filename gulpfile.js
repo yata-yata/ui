@@ -3,7 +3,6 @@ var browserify = require('browserify'),
     sass = require('gulp-sass'),
     clean = require('gulp-clean'),
     imagemin = require('gulp-imagemin'),
-    reactify = require('reactify'),
     source = require('vinyl-source-stream');
 
 
@@ -12,7 +11,6 @@ var browserify = require('browserify'),
 
 gulp.task('scripts', function(){
     return browserify('./lib/src/scripts/main.js')
-    .transform(reactify)
     .bundle({debug: true})
     .pipe(source('bundle.js'))
     .pipe(gulp.dest('./lib/generated/scripts/'));
