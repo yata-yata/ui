@@ -14,9 +14,8 @@
     "hawk": ">=2.2.0",
     "jade": ">=1.3.1",
     "lodash": "^2.4.1",
-    "nipple": ">=2.5.1"
-  },
-  "devDependencies": {
+    "nipple": ">=2.5.1",
+
     "bower": ">=1.3.3",
     "browserify": ">=4.1.2",
     "gulp": ">=3.6.2",
