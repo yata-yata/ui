@@ -2,5 +2,8 @@ section
   header
     h1 todos
   section#todos
+    form#todo-form(ng-submit='addTodo()')
+      input#new-todo(placeholder='What needs to be done?', ng-model='newTodo')
+
     ul
       li(ng-repeat='todo in todos') {{todo.title}} is {{todo.status}}
