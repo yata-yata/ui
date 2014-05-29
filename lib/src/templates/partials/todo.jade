@@ -1,9 +1,10 @@
 section
   header
-    h1 todos
   section#todos
     form#todo-form(ng-submit='addTodo()')
       input#new-todo(placeholder='What needs to be done?', ng-model='newTodo')
 
     ul
-      li(ng-repeat='todo in todos') {{todo.title}} is {{todo.status}}
+      li.todo-item.clickable(ng-repeat='todo in todos', ng-click='complete(todo)') 
+        i.fa.fa-check.todo-check.todo-check-not-started
+        |  {{todo.title}} is {{todo.status}}
