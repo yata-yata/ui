@@ -1,0 +1,29 @@
+@import "bourbon";
+@import "bitters/bitters";
+@import "neat";
+
+#todo-list li .edit {
+  display: inline;
+}
+
+.todo-item {
+  font-size: 1.5em;
+}
+
+.todo-check {
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.todo-check-not-started {
+  color: white;
+}
+
+.todo-item:hover .todo-check-not-started {
+  color: #77b57a;
+}
+
+.todo-check-done {
+  color: #77b57a;
+}
+
+
