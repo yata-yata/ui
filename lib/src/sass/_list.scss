@@ -1,0 +1,25 @@
+#todo-list li .edit {
+  display: inline;
+}
+
+.todo-item {
+  font-size: 1.5em;
+}
+
+.todo-icon-not-started {
+  color: black;
+  @extend .fa;
+  @extend .fa-circle-o;
+}
+
+.todo-item:hover .todo-icon-not-started {
+  color: #77b57a;
+}
+
+.todo-icon-done {
+  @extend .fa;
+  @extend .fa-circle;
+  color: #77b57a;
+}
+
+
