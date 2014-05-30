@@ -10,6 +10,7 @@
   color: black;
   @extend .fa;
   @extend .fa-circle-o;
+  @extend .clickable;
 }
 
 .todo-item:hover .todo-icon-not-started {
@@ -17,9 +18,10 @@
 }
 
 .todo-icon-done {
+  color: #77b57a;
   @extend .fa;
   @extend .fa-circle;
-  color: #77b57a;
+  @extend .clickable;
 }
 
 

@@ -1,0 +1,3 @@
+button.pill {
+  @include pill($base-color: #4294f0, $grayscale: true);
+}

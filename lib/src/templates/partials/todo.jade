@@ -1,10 +1,11 @@
 section
   header
+    button.pill(ng-click='archiveCompleted()') Clear Finished
   section#todos
     form#todo-form(ng-submit='addTodo()')
       input#new-todo(placeholder='What needs to be done?', ng-model='newTodo')
 
     ul
-      li.todo-item.clickable(ng-repeat='todo in todos', ng-click='nextStatus(todo)')
+      li.todo-item.clickable(ng-repeat='todo in todos | filter:archived', ng-click='nextStatus(todo)')
         i(ng-class='getStatusClass(todo.status)')
         |  {{todo.title}} is {{todo.status}}
