@@ -24,8 +24,6 @@ gulp.task('styles', function () {
     gulp.src('./lib/src/sass/**/*.scss')
     .pipe(sass({
         includePaths: [
-            './lib/src/components/font-awesome/scss/',
-            './lib/src/components/bootstrap-sass-official/vendor/assets/stylesheets/',
             './lib/src/sass/'
         ].concat(require('node-neat').includePaths)
     }))

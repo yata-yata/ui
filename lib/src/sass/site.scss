@@ -2,8 +2,8 @@
 @import "bourbon";
 @import "bitters/bitters";
 @import "neat";
-@import "font-awesome";
-@import "bootstrap";
+@import "../components/font-awesome/scss/font-awesome.scss";
+@import "../components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
 @import "texture/texture";
 @import "signin";
 @import "list";
