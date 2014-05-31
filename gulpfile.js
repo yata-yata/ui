@@ -1,8 +1,9 @@
 var browserify = require('browserify'),
-    gulp = require('gulp'),
-    sass = require('gulp-sass'),
     clean = require('gulp-clean'),
+    gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
+    livereload = require('gulp-livereload'),
+    sass = require('gulp-sass'),
     source = require('vinyl-source-stream');
 
 
@@ -13,7 +14,8 @@ gulp.task('scripts', function(){
     return browserify('./lib/src/scripts/main.js')
     .bundle({debug: true})
     .pipe(source('bundle.js'))
-    .pipe(gulp.dest('./lib/generated/scripts/'));
+    .pipe(gulp.dest('./lib/generated/scripts/'))
+    .pipe(livereload());
 });
 
 
@@ -27,7 +29,8 @@ gulp.task('styles', function () {
             './lib/src/sass/'
         ].concat(require('node-neat').includePaths)
     }))
-    .pipe(gulp.dest('./lib/generated/styles/'));
+    .pipe(gulp.dest('./lib/generated/styles/'))
+    .pipe(livereload());
 });
 
 
