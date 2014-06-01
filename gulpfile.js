@@ -3,6 +3,7 @@ var browserify = require('browserify'),
     gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     livereload = require('gulp-livereload'),
+    minifyCSS = require('gulp-minify-css'),
     sass = require('gulp-sass'),
     source = require('vinyl-source-stream');
 
@@ -29,6 +30,7 @@ gulp.task('styles', function () {
             './lib/src/sass/'
         ].concat(require('node-neat').includePaths)
     }))
+    .pipe(minifyCSS({keepSpecialComments:0}))
     .pipe(gulp.dest('./lib/generated/styles/'))
     .pipe(livereload());
 });
