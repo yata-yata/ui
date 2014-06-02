@@ -48,6 +48,7 @@ gulp.task('images', function () {
 
 // Components
 // ==========
+
 gulp.task('components', function(){
     gulp.src('./lib/src/components/**/*')
     .pipe(gulp.dest('./lib/generated/components'));
@@ -56,6 +57,7 @@ gulp.task('components', function(){
 
 // Helpers
 // =======
+
 gulp.task('clean', function() {
     return gulp.src(['./lib/generated'], {read: false})
     .pipe(clean());
