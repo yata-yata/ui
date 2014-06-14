@@ -2,6 +2,7 @@
   "name": "ui",
   "version": "0.1.0",
   "main": "index",
+  "license": "Artistic-2.0",
   "scripts": {
     "test": "node ./node_modules/lab/bin/lab -v -c -p",
     "postinstall": "./node_modules/bower/bin/bower install && ./node_modules/gulp/bin/gulp.js build",
