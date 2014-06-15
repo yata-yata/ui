@@ -32,5 +32,8 @@
   },
   "peerDependencies": {
     "hapi": ">=4.x"
+  },
+  "devDependencies": {
+    "gaze": "^0.5.1"
   }
 }
