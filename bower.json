@@ -17,6 +17,7 @@
   "appPath": "./lib/src",
   "dependencies": {
     "font-awesome": "*",
-    "bootstrap-sass-official": "*"
+    "bootstrap-sass-official": "*",
+    "animate-css": "~3.1.1"
   }
 }

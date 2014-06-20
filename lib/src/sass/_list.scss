@@ -4,6 +4,11 @@
 
 .todo-item {
   font-size: 1.5em;
+
+  &.ng-leave {
+    -webkit-animation: 0.25s fadeOutRight;
+    animation: 0.25s fadeOutRight;
+  }
 }
 
 .todo-icon-not-started {
