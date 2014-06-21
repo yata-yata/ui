@@ -1,30 +1,114 @@
-#todo-list li .edit {
-  display: inline;
+.todo-page {
+  @include outer-container;
 }
 
-.todo-item {
-  font-size: 1.5em;
+@mixin todo-item-columns($columns) {
+  width: (100% / 12) * $columns;
+}
 
-  &.ng-leave {
-    -webkit-animation: 0.25s fadeOutRight;
-    animation: 0.25s fadeOutRight;
+.new-todo {
+  font-size: 2em;
+  width: 100%;
+  padding: .5em;
+}
+
+.todo-items-lines {
+  $todo-items-background: $base-body-color;
+  $todo-item-background: $base-body-color;
+  $todo-item-border: 1px solid transparentize($base-font-color, .8); 
+  $todo-item-columns: 4;
+  $todo-item-big-columns: 8;
+  $todo-item-color: $base-font-color;
+  $todo-item-height: 14em;
+
+  @include clearfix;
+  position: relative;
+
+  .todo-item {
+    @include transition (all 0.2s ease-in-out);
+    height: $todo-item-height;
+    background: $todo-item-background;
+    width: 100%;
+    overflow: hidden;
+    float: left;
+    padding: 2em;
+    border-right: $todo-item-border;
+    border-bottom: $todo-item-border;
+    cursor: pointer;
+
+    @include media($large-screen) {
+      @include todo-item-columns($todo-item-columns);
+    }
+
+    &:hover {
+      background: transparentize($todo-item-color, .95);
+
+      .todo-icon {
+        @extend .fa-check-circle;
+      }
+    }
+
+    &.ng-leave {
+      -webkit-animation: 0.25s fadeOutRight;
+      animation: 0.25s fadeOutRight;
+    }
+
+    &.todo-done {
+      background: #77b57a;
+
+      .todo-icon {
+        @extend .fa-check-circle;
+      }
+    }
+
+    .todo-icon {
+      font-size: 3em;
+      opacity: .2;
+      @extend .fa;
+      @extend .fa-circle-o;
+    }
+  }
+
+  .todo-item h1 {
+    color: $todo-item-color;
+    font-size: 1.3em;
+    margin-bottom: .4em;
+  }
+
+  .todo-item p {
+    color: transparentize($todo-item-color, .4);
+    @include media($medium-screen) {
+      max-width: 70%;
+    }
+  }
+
+  .todo-item-large {
+    @include media($large-screen) {
+      @include todo-item-columns($todo-item-big-columns);
+    }
+    p {
+      @include media($medium-screen) {
+        max-width: 60%;
+      }
+    }
+  }
+
+  // this, below, might not be the most beautiful solution but it removes the outer borders by using the background color.
+  .bottom-cover {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 3px;
+    background: $todo-items-background;
+  }
+
+  .right-cover {
+    position: absolute;
+    right: 0px;
+    height: 100%;
+    width: 4px;
+    background: $todo-items-background;
   }
 }
 
-.todo-icon-not-started {
-  color: black;
-  @extend .fa;
-  @extend .fa-circle-o;
-  @extend .clickable;
-}
 
-.todo-item:hover .todo-icon-not-started {
-  color: #77b57a;
-}
-
-.todo-icon-done {
-  color: #77b57a;
-  @extend .fa;
-  @extend .fa-circle;
-  @extend .clickable;
-}
