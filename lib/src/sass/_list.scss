@@ -53,6 +53,11 @@
       animation: 0.25s fadeOutRight;
     }
 
+    &.ng-move {
+      -webkit-animation: 0.25s pulse;
+      animation: 0.25s pulse;
+    }
+
     &.todo-done {
       background: #77b57a;
 
